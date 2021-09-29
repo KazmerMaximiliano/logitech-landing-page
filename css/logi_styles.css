@@ -1,0 +1,2880 @@
+/*
+Theme Name: LANDING LOGITECH
+Author: Visiva Estudio
+Author URI: http://visivaestudio.com.ar
+Version: 1.0
+*/
+
+body,
+html {
+  margin: 0;
+}
+
+/*****************************************
+BASICS
+*******************************************/
+#logi_max_container a,
+#logi_max_container a:link,
+#logi_max_container a:visited,
+#logi_max_container a:hover,
+#logi_max_container a:focus {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  box-sizing: content-box;
+}
+#logi_max_container *:focus {
+  outline: none;
+}
+#logi_max_container img {
+  display: block;
+  border: none;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  max-width: 100%;
+}
+.logi_section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+.logi_clearfix {
+  position: relative;
+  max-width: 1280px;
+  margin: auto;
+}
+#logi_max_container h2 {
+  margin: 0 auto;
+  font-size: 20px;
+}
+#logi_max_container p {
+  letter-spacing: 1px;
+  margin: 10px auto;
+  font-size: 13px;
+}
+#logi_max_container nav {
+}
+#logi_max_container ul {
+  margin: 0 auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nw_arrows {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  padding: 5px 10px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #0090c2;
+  cursor: pointer;
+}
+.nw_arrows img {
+  max-width: 27px !important;
+}
+.nw_arrows.flex-prev {
+  left: 0;
+}
+.nw_arrows.flex-next {
+  right: 0;
+}
+
+#logi_banner {
+}
+.logi_banner {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+}
+
+/*CATEGORIES*/
+#logi_categories {
+  padding: 30px 0;
+}
+.logi_categories_menu {
+  margin-top: 5px;
+  overflow: hidden;
+}
+.logi_categories_menu li {
+  display: inline-block;
+  width: 13%;
+  position: relative;
+  vertical-align: top;
+  overflow: hidden;
+  height: 250px;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.logi_categories_menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  line-height: 15px;
+}
+.logi_categories_menu li a img {
+  width: 100%;
+}
+.logi_categories_menu li:hover {
+  background-size: 180% !important;
+  background-position: 25% 40% !important;
+}
+
+#logi_categories.fixed,
+#logi_categories_fixed {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding: 20px 0;
+}
+#logi_categories.fixed li,
+#logi_categories_fixed li {
+  overflow: hidden;
+}
+#logi_categories.fixed p,
+#logi_categories_fixed p {
+  display: none;
+}
+#logi_categories_fixed {
+  opacity: 0;
+  top: -150px;
+}
+#logi_categories_fixed.fixed {
+  opacity: 1;
+  top: 0px;
+}
+
+/*LOOP*/
+.logi_loop {
+  text-align: center;
+  position: relative;
+}
+.logi_loop .item_loop {
+  max-width: 600px;
+  display: inline-block;
+  vertical-align: top;
+  width: 32%;
+  text-align: left;
+  margin: 0 30px 30px 0;
+  position: relative;
+}
+.logi_loop .logi_loop_img img {
+  display: block;
+}
+.logi_button {
+  font-size: 14px;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 10px 0 0 0;
+}
+.logi_button_video {
+}
+.logi_loop img {
+  min-height: 50px;
+  background: #f1f1f1;
+}
+
+/*COLS*/
+.logi_cols_2 .item_loop {
+  width: 43%;
+}
+.logi_cols_3 .item_loop {
+  width: 29%;
+}
+
+/*ANIMATION TRANSITION*/
+.logi_cssamin,
+.logi_categories_menu li,
+#logi_categories,
+#logi_categories_fixed,
+.logi_categories_menu li img,
+.nw_arrows,
+.logi_categories_menu li span,
+.logi_button,
+.logi_loop .item_loop,
+.logi_video_btn_bg,
+.logi_loop_img,
+.vc_cont_catimg,
+.logi_jaybird .logi_j_over,
+.logi_jaybird .logi_categories_menu li a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/*POPS*/
+#logi_pop,
+#logi_pop_contact,
+.contpops {
+  overflow-y: auto;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.41);
+  z-index: 2;
+  top: 0;
+}
+#logi_pop .logi_pop_container,
+#logi_pop_contact .logi_pop_container,
+.contpops .logi_pop_container {
+  width: 60%;
+  height: auto;
+  top: 50%;
+  margin: -16% auto 0;
+  position: relative;
+  -webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.22);
+  padding: 5px;
+  background: #000;
+}
+#logi_pop iframe {
+  width: 100%;
+  height: 100%;
+  height: calc(50vh);
+  display: none;
+}
+#logi_video {
+  width: 100%;
+  height: auto;
+}
+.logi_video {
+  width: auto;
+  height: 100%;
+  opacity: 0;
+  position: relative;
+}
+.logi_video_btn {
+  background-image: url(../astro/images/play-button.png);
+  width: 50px;
+  height: 50px;
+  margin: -25px;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+}
+.logi_video_btn_bg {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  top: 0;
+}
+
+.logi_close_pop {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  font-family: Brown-Pro-bold;
+  font-size: 35px;
+  line-height: 15px;
+  top: -30px;
+  cursor: pointer;
+}
+
+/*FORM CONTACTO*/
+#logi_pop_contact {
+  font-family: Brown-Pro-Regular;
+}
+#logiform_contact {
+  background: #fff;
+  padding: 20px 30px 30px;
+  text-align: center;
+}
+#logiform_contact .logiform_row {
+  font-size: 14px;
+  margin: 10px auto;
+}
+#logiform_contact h2 {
+  margin: 0;
+}
+#logiform_contact .logiform_row p {
+  display: block;
+  margin: 10px auto 20px;
+}
+#logiform_contact span {
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%;
+  text-align: left;
+}
+#logiform_contact input,
+#logiform_contact textarea {
+  font-size: 14px;
+  font-family: Brown-Pro-Regular;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  padding: 10px;
+}
+#logiform_contact #logiform_submit {
+  border: none;
+  background: #434343;
+  margin: auto;
+  color: #fff;
+  width: auto;
+  text-align: center;
+  padding: 10px 20px;
+}
+#logiform_contact .logiform_row.submit {
+  text-align: center;
+}
+#logiform_contact .logiform_result {
+  color: #f44336;
+  background: #fff;
+  padding: 10px;
+}
+#logiform_contact .logiform_result img {
+  width: 20px;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+}
+#logi_pop_contact .logi_pop_container {
+  top: 150px;
+  margin: 0px auto 0;
+}
+
+/*SLIDER HOME*/
+.logi_slide {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-dots {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  padding: 0;
+  list-style-type: none;
+  z-index: 0;
+  margin: -100px 0 0 0;
+}
+.slick-dots li {
+  display: block;
+  vertical-align: middle;
+  margin: 0 0 10px 0;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: solid 2px #fff;
+  background: none;
+  padding: 0;
+  width: 8px;
+  cursor: pointer;
+  height: 8px;
+  position: relative;
+}
+.slick-dots li button {
+  background: none;
+  border: none;
+  font-size: 0px;
+  line-height: 0;
+  display: block;
+  left: -2px;
+  top: -2px;
+  position: relative;
+}
+.slick-dots .slick-active {
+  background: #fff;
+}
+.slick-dots li button:active,
+.slick-dots li button:focus,
+.slick-dots li button:hover {
+  outline: 0;
+}
+/*#logi_max_container .slick-track{ width: 100%; height: 100%; position: relative;overflow: hidden; }*/
+#logi_slider {
+  height: 450px;
+}
+
+/**********************************************************************************************/
+/*GAMING*/
+.logi_gamming .logi_clearfix {
+  max-width: 80%;
+}
+.logi_gamming .logi_banner {
+  background-position: top center;
+  border-top: solid 1px #2d2d2d;
+}
+.logi_gamming .logi_button {
+  background: #00b7fb;
+  color: #fff !important;
+  font-family: Brown-Pro-Bold;
+}
+.logi_gamming .logi_button:hover {
+  background: #ffffff;
+  color: #171717 !important;
+  font-size: 14px;
+}
+.logi_gamming .logi_button_video {
+  background: #2a2a2a !important;
+  color: #fff;
+}
+.logi_gamming .logi_button_video:hover {
+  color: #fff !important;
+}
+
+/*.logi_gamming #logi_categories{     height: 315px;   }*/
+.logi_gamming #logi_categories,
+.logi_gamming #logi_categories_fixed {
+  background-color: #00b7fb;
+}
+.logi_gamming .logi_categories_menu li {
+  background-color: #383838;
+  margin: 0 10px;
+  overflow: hidden;
+}
+.logi_gamming .logi_categories_menu li:hover {
+  background-color: #000;
+}
+.logi_gamming .logi_categories_menu li span {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.logi_gamming #logi_categories.fixed li {
+  width: 130px;
+  height: 33px;
+  background: #383838 !important;
+}
+.logi_gamming #logi_categories.fixed .nw_arrows,
+.logi_gamming #logi_categories_fixed .nw_arrows {
+  padding: 2px 5px;
+  margin-top: 2px;
+}
+.logi_gamming .logi_categories_menu li span {
+  top: 7px;
+}
+.logi_gamming #logi_categories_fixed li {
+  width: 12%;
+  height: 33px;
+  background: #383838;
+  margin: 0;
+}
+.logi_gamming #logi_categories_fixed li:hover {
+  background: #fff;
+}
+.logi_gamming #logi_categories_fixed li:hover span {
+  color: #383838;
+}
+
+.logi_gamming .logi_loop h3,
+.logi_gamming h2 {
+  font-family: Brown-Pro-Bold;
+}
+.logi_gamming .logi_price {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-family: Brown-Pro-BOld;
+  font-size: 14px;
+  margin: 10px 0 0 46%;
+  padding: 5px 10px;
+}
+
+/*
+.logi_gamming .item_loop {-webkit-box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0);  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0);  padding: 0 10px 20px;}
+.logi_gamming .item_loop:hover { padding: 0 20px 20px;}*/
+
+/*.logi_gamming .logi_cols_2 .item_loop:hover{ width: 48%; }
+.logi_gamming .logi_cols_3 .item_loop:hover{ width: 30%;}*/
+
+.logi_gamming .logi_loop_theme_1 .logi_button,
+.logi_gamming .logi_loop_theme_1 .logi_price {
+  margin: 10px 0 0 46%;
+}
+
+.logi_gamming .logi_loop_theme_2 .logi_button,
+.logi_loop_theme_3 .logi_button {
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+}
+.logi_gamming .logi_loop_theme_2 .logi_price,
+.logi_gamming .logi_loop_theme_3 .logi_price {
+  position: relative;
+  margin: -30px 0 40px 0;
+  display: block;
+}
+
+.logi_gamming .logi_loop_theme_3 h3 {
+  margin-bottom: -25px !important;
+  z-index: 1;
+  position: relative;
+}
+.logi_gamming .logi_loop_theme_3 .item_loop:nth-child(odd),
+.logi_loop_theme_4 .item_loop:nth-child(odd) {
+  border-right: solid 1px #00b7fb;
+}
+.logi_gamming .logi_loop_theme_3 .item_loop:last-child,
+.logi_loop_theme_4 .item_loop:last-child {
+  border: none;
+}
+
+.logi_gamming .logi_loop_theme_4 h3 {
+  position: absolute;
+  right: 0;
+  width: 46%;
+  top: 10%;
+}
+.logi_gamming .logi_loop_theme_4 .logi_button {
+  margin: 0;
+}
+.logi_gamming .logi_loop_theme_4 .logi_price {
+  margin: 10px 0 0 0%;
+}
+
+/*
+.logi_gamming .logi_loop_theme_1 .item_loop:hover,
+.logi_gamming .logi_loop_theme_3 .item_loop:hover,
+.logi_gamming .logi_loop_theme_4 .item_loop:hover{ 
+    -webkit-box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.1);  
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.1);  
+}
+
+.logi_gamming .logi_loop_theme_2 .item_loop:hover, 
+#logi_headphones .item_loop:hover, 
+#logi_steeringwheel .item_loop:hover{ 
+    -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);  
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);  
+}*/
+
+.logi_gamming .logi_loop_theme_3 .logi_button_video,
+.logi_gamming .logi_loop_theme_2 .logi_button_video {
+  margin: 0 0 0 20%;
+  position: absolute;
+  bottom: 10px;
+}
+
+#logi_mouses h3,
+#logi_keyboards h3,
+#logi_steeringwheel h3,
+#logi_speakers h3,
+#logi_cams h3 {
+  color: #00b7fb;
+  margin: 10px 0 4px;
+  font-size: 20px;
+  min-height: 50px;
+  line-height: 30px;
+}
+#logi_steeringwheel h3 {
+  line-height: 22px;
+}
+#logi_mousepads h3,
+#logi_headphones h3 {
+  background: #00b7fb;
+  color: #fff;
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 3px 5px;
+  text-align: center;
+}
+.logi_tm {
+  display: block;
+  font-family: Brown-Pro-Light;
+  color: #fff;
+}
+
+#logi_mouses {
+  background: #171717;
+  padding: 40px 0;
+}
+#logi_mousepads {
+  background: #e1e0e0;
+  padding: 40px 0;
+}
+#logi_keyboards {
+  background: #000;
+  padding: 40px 0;
+}
+#logi_headphones {
+  background: #e1e0e0;
+  padding: 40px 0;
+}
+#logi_cams {
+  background: #000;
+  padding: 40px 0;
+}
+#logi_cams .item_loop {
+  border: none;
+}
+#logi_cams .logi_loop_img {
+  margin-bottom: 30px;
+}
+#logi_steeringwheel {
+  background: #e1e0e0;
+  padding: 40px 0;
+}
+#logi_speakers {
+  background: #000;
+  padding: 40px 0;
+}
+
+#logi_mouses .logi_price,
+#logi_keyboards .logi_price,
+#logi_cams .logi_price,
+#logi_speakers .logi_price {
+  color: #fff;
+}
+#logi_mousepads .logi_price,
+#logi_headphones .logi_price,
+#logi_steeringwheel .logi_price {
+  color: #2a2a2a;
+}
+
+#logi_mouses .item_loop {
+  border-top: dotted 1px #525252;
+  border-right: dotted 1px #525252;
+  margin: 0 30px 70px 0;
+}
+#logi_mouses h3 {
+  background: #171717;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  padding: 0 10px 0 0;
+  min-height: 10px;
+  margin: 0 0 4px 0;
+}
+#logi_slider .nw_arrows {
+  background: none;
+}
+#logi_slider .nw_arrows.flex-prev {
+  left: 30px;
+}
+#logi_slider .nw_arrows.flex-next {
+  right: 30px;
+}
+#logi_slider .logi_slider_text {
+  color: #fff;
+  font-size: 60px;
+  line-height: 55px;
+  font-family: Brown-Pro-Bold;
+  width: 450px;
+  text-align: left;
+  margin: 20% 0 0 10%;
+  position: relative;
+  top: 50%;
+}
+
+#logi_slider .slick-slide {
+  background: #000;
+  position: relative;
+  background-position: right center;
+  background-size: cover;
+}
+#logi_slider .logi_ss_3 {
+  background-position: right top;
+}
+#logi_slider .logi_ss_4 .logi_slider_text {
+  width: 500px;
+}
+.logi_gamming #logi_slider .logi_ss_1 {
+  background-position: right 30% !important;
+}
+.logi_gamming .logi_banner {
+  height: auto;
+}
+.logi_gamming .logi_categories_menu .slick-list,
+.logi_gamming .logi_categories_menu .slick-track {
+  height: auto;
+}
+
+.logi_gamming #logi_keyboards .item_loop img,
+.logi_gamming #logi_steeringwheel .item_loop img,
+.logi_gamming #logi_cams .item_loop img,
+.logi_gamming #logi_mousepads .item_loop img,
+.logi_gamming #logi_speakers .item_loop img {
+  max-width: 550px;
+}
+
+.logi_gamming #logi_mouses .item_loop img,
+.logi_gamming #logi_headphones .item_loop img {
+  max-width: 358px;
+}
+
+.logi_gamming .logi_ue_prod_slide {
+  height: auto;
+}
+.logi_gamming .logi_colors {
+  margin: 0 0 15px 15%;
+}
+.logi_gamming .logi_colors .logi_ue_circle {
+  width: 25px !important;
+  height: 25px !important;
+  margin: 0 5px;
+}
+.logi_gamming #logi_keyboards .logi_colors {
+  margin: -50px 0 50px 0;
+}
+
+/*FIX FOR FULLH4RD*****************************/
+.fullh4rd.com.ar #logi_categories_fixed.fixed {
+  top: 65px;
+  padding: 10px 0;
+}
+.fullh4rd.com.ar #logi_categories_fixed.fixed h2 {
+  display: none;
+}
+.fullh4rd.com.ar.logi_astro #logi_categories.fixed li {
+  padding: 10px;
+  height: auto;
+}
+
+.logi_gamming #logi_slider {
+  height: auto;
+}
+
+/**********************************************************************************************/
+/*ASTRO*/
+.logi_astro {
+  font-family: "Geogrotesque-Regular";
+  background: #0b0b0b;
+  color: #fff;
+}
+.logi_astro .logi_price {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 17px;
+  margin: 0;
+  padding: 5px 0;
+  font-family: "Geogrotesque-Regular";
+}
+.logi_astro #logi_categories {
+  background-color: #0b0b0b;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../astro/images/bg_cats.png");
+}
+#logi_max_container.logi_astro h2 {
+  margin: 0 auto 20px;
+  color: #929396;
+  letter-spacing: 5px;
+  font-size: 22px;
+}
+.logi_astro #logi_categories li,
+.logi_astro #logi_categories_fixed li {
+  margin: 0 2px;
+  background-color: #2d2d2b;
+  color: #fff;
+  padding: 15px;
+  font-size: 110%;
+  width: 13%;
+  height: 180px;
+  background-position: 50% 60%;
+  background-size: 70%;
+}
+.logi_astro #logi_categories li span,
+.logi_astro #logi_categories_fixed li span,
+.logi_astro .item_loop p {
+  color: #fff;
+  font-family: "Geogrotesque-Regular";
+}
+.logi_astro #logi_categories li img {
+  width: 80%;
+  display: inline-block;
+  margin: 10px auto 0;
+}
+.logi_astro #logi_categories li:hover {
+  background-color: #b7b6b4;
+  background-size: 180% !important;
+  background-position: 5% 60% !important;
+}
+
+.logi_astro .logi_banner.video {
+  height: 400px;
+}
+.logi_astro .logi_banner.sep {
+  height: 450px;
+  background-size: cover;
+  background-position: top left;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+.logi_astro #logi_banner {
+  padding: 40px 0;
+}
+.logi_astro #logi_banner img {
+  display: block;
+  width: auto;
+}
+
+.logi_astro #logi_categories.fixed,
+.logi_astro #logi_categories_fixed {
+  background-image: none;
+  background: #0b0b0b;
+}
+.logi_astro #logi_categories.fixed img {
+  display: none;
+}
+.logi_astro #logi_categories.fixed li,
+.logi_astro #logi_categories_fixed li {
+  padding: 5px 10px;
+  height: 23px;
+  background: #383838 !important;
+}
+
+.logi_astro_separator {
+}
+.logi_astro_title {
+  width: 20%;
+  float: right;
+  right: 5%;
+  position: relative;
+}
+.logi_astro_title h3 {
+  display: none;
+}
+.logi_astro_title img {
+}
+.logi_astro_title .logi_astro_specs {
+}
+.logi_astro_title .logi_astro_specs img {
+}
+
+.logi_astro .logi_button {
+  font-family: "Geogrotesque-Regular";
+  background: #e3231c;
+  width: 95px;
+  color: #fff !important;
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin: 0 0 5px 0;
+  padding: 5px 40px;
+}
+.logi_astro .logi_button:hover {
+  padding: 10px 50px;
+}
+.logi_astro .logi_loop {
+  width: 80%;
+  float: left;
+}
+.logi_astro .item_loop {
+  width: 46%;
+  max-width: 100%;
+  margin: 0;
+}
+.logi_astro .item_loop:nth-child(odd) {
+  margin: 0 0 0 5%;
+}
+.logi_astro .item_loop:nth-child(even) {
+  position: relative;
+  margin: 20% 0 0 -18%;
+}
+.logi_astro .item_loop:nth-child(even) .logi_astro_loop_detail {
+  position: relative;
+  margin: -12% 0 0 -20%;
+  text-align: right;
+}
+.logi_astro .item_loop img {
+  background: none;
+}
+.logi_astro .item_loop .logi_astro_loop_detail {
+  margin-top: -10%;
+  width: 200px;
+}
+.logi_astro .item_loop:nth-child(even) .logi_astro_loop_detail {
+  float: right;
+}
+.logi_astro .item_loop p {
+}
+
+#a10 .item_loop:nth-child(odd) {
+  margin: 6% -15% 0 5%;
+}
+#a10 .item_loop:nth-child(even) {
+  margin: 0%;
+  width: 40%;
+}
+
+.logi_astro_footer {
+  overflow: hidden;
+}
+#a10,
+#a40,
+#a50 {
+  padding: 40px 0;
+  background-image: url("../astro/images/bg_product.png");
+  background-size: contain;
+  background-position: top left;
+  overflow: auto;
+  background-repeat: no-repeat;
+}
+.logi_close_pop.astro {
+  font-family: "Geogrotesque-Regular";
+}
+
+.logi_astro .logi_button_video {
+}
+#a10zelda {
+  background-image: url("../astro/images/zelda_bg.jpg");
+  background-size: cover;
+  background-position: top center;
+  height: auto;
+  overflow: auto;
+}
+#a10zelda .logi_zelda_col {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28%;
+  margin: 0;
+}
+#a10zelda .logi_zelda_left {
+  float: left;
+  width: 24%;
+  margin: 30px;
+}
+#a10zelda .logi_zelda_right {
+  float: right;
+  width: 30%;
+  margin: 20px 30px;
+}
+#a10zelda img {
+}
+#a10zelda .logi_astro_loop_detail {
+  width: 200px;
+  margin: 0 0 0 5px;
+  text-align: left;
+}
+
+.logi_astro #logi_banner .logi_banner {
+  height: auto;
+}
+.logi_astro .logi_section {
+  overflow: auto;
+}
+.logi_astro #logi_pop_contact {
+  font-family: "Geogrotesque-Regular";
+  color: #333;
+}
+.logi_astro #logi_max_container p {
+  font-size: 14px;
+}
+.logi_astro #logiform_contact .logiform_row,
+.logi_astro #logiform_contact input,
+.logi_astro #logiform_contact textarea {
+  font-family: "Geogrotesque-Regular";
+}
+
+.logi_astro .contpops {
+  background: rgba(0, 0, 0, 0.41);
+}
+.logi_astro .contpops .logi_close_pop {
+  color: #fff;
+}
+.logi_astro #logi_puntos_venta {
+  color: #000;
+}
+.logi_astro #logi_puntos_venta h3 {
+  font-size: 20px;
+  margin: 20px 0 0;
+}
+.logi_astro #logi_puntos_venta p {
+  font-size: 16px;
+}
+.logi_astro .logi_puntos_link {
+  width: 12%;
+}
+
+/* ==========================================================================
+   UE
+   ========================================================================== */
+#logi_ue_header {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  z-index: 2;
+}
+#logi_ue_header img,
+.logi_ue_logo {
+  max-width: 150px !important;
+}
+#logi_max_container.logi_ue #logi_categories_fixed .logi_ue_logo {
+  max-width: 150px !important;
+  margin: -20px auto 20px auto;
+}
+.logi_ue {
+}
+.logi_ue #logi_slider .logi_slider_text {
+  top: 55%;
+  width: 400px;
+  font-family: "News Gothic Std";
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 600;
+}
+.logi_ue_title1,
+.logi_ue .logi_slider_title2 {
+  font-size: 30px;
+  line-height: 30px;
+  display: block;
+}
+.logi_ue_title2,
+.logi_ue .logi_slider_title1 {
+  display: block;
+}
+
+.logi_ue #logi_slider .slick-slide {
+  background-position: center;
+}
+
+.logi_ue .logi_ss_2 {
+  background-position: top center !important;
+}
+.logi_ue .logi_ss_2 .logi_slider_text {
+  text-align: right !important;
+}
+
+.logi_ue .logi_ss_1 .logi_slider_text {
+  text-align: center !important;
+  right: 15%;
+  position: relative;
+  float: right;
+}
+.logi_ue .logi_ss_1 .ult {
+  position: relative;
+  left: 95px;
+}
+.logi_ue .logi_ss_1 .logi_ue_title2,
+.logi_ue .logi_ss_1 .logi_slider_title1 {
+  line-height: 55px;
+}
+.logi_ue .logi_ss_1 .ult {
+  font-size: 30px;
+  line-height: 30px;
+}
+.logi_ue #logi_slider .logi_ss_1 {
+  background-position: center 30%;
+}
+
+.logi_ue .logi_ss_3 .logi_slider_text {
+  right: 15%;
+  position: relative;
+  float: right;
+}
+.logi_ue .logi_ss_3 .logi_ue_title2,
+.logi_ue .logi_ss_3 .logi_slider_title1 {
+  font-size: 60px;
+  line-height: 60px;
+}
+.logi_ue .logi_ss_3 .logi_ue_title1 img,
+.logi_ue .logi_ss_3 .logi_slider_title2 img {
+  max-width: 50px !important;
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+.logi_ue #logi_slider .logi_ss_4 {
+  background-position: center 40%;
+}
+
+.logi_ue .nw_arrows {
+  padding: 10px 10px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background: #fff;
+}
+.logi_ue .nw_arrows img {
+  max-width: 20px !important;
+  background: none;
+  min-height: 0px;
+}
+
+.logi_ue #logi_categories {
+  height: auto;
+}
+
+.logi_ue .logi_categories_menu li:hover {
+  background-position: center !important;
+  background-size: 100% !important;
+}
+
+.logi_ue .logi_categories_menu li a {
+  height: auto;
+  font-weight: bold;
+  font-family: "News Gothic Std";
+  position: relative;
+  top: 0;
+  background: #fff;
+  padding: 5px 0;
+  color: #000;
+}
+.logi_ue #logi_categories_fixed .logi_categories_menu li a {
+  position: relative;
+  top: 0;
+  padding: 0;
+  color: #000;
+}
+.logi_ue .logi_categories_menu li a:hover {
+  color: #666 !important;
+}
+.logi_ue .logi_categories_menu li {
+  height: auto !important;
+  width: 15%;
+}
+.logi_ue .logi_categories_menu li a img {
+  width: auto !important;
+  height: 150px !important;
+  max-width: none !important;
+}
+
+.logi_ue .logi_categories_menu {
+  overflow: visible;
+  width: 90%;
+  margin: auto;
+}
+.logi_ue .logi_categories_menu .nw_arrows.flex-prev {
+  left: -50px;
+}
+.logi_ue .logi_categories_menu .nw_arrows.flex-next {
+  right: -50px;
+}
+.logi_ue_product_slidercolors .nw_arrows.flex-prev {
+  left: -20px;
+}
+.logi_ue_product_slidercolors .nw_arrows.flex-next {
+  right: -20px;
+}
+.logi_ue .logi_categories_menu .nw_arrows {
+  top: 40%;
+}
+#logi_max_container.logi_ue h2 {
+  font-family: "News Gothic Std" !important;
+  font-size: 30px;
+}
+.logi_ue #logi_categories_fixed {
+  background: #fff;
+}
+.logi_ue #logi_categories.fixed,
+.logi_ue #logi_categories_fixed {
+  padding: 0px;
+}
+.logi_ue #logi_categories_fixed .logi_categories_menu {
+  margin: 20px auto;
+}
+
+.logi_ue_loop {
+  text-align: center;
+  padding: 50px 0;
+}
+.logi_ue_product_features,
+.logi_ue_product_shop,
+.logi_ue_product_slidercolors {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%;
+}
+.logi_ue_product_features img {
+}
+
+.logi_ue_product_slidercolors {
+  width: 25%;
+  margin: 0 5%;
+}
+.logi_ue_prod_slide {
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logi_colors {
+  margin: 0 0 15px 0;
+}
+.logi_colors .logi_ue_circle {
+  width: 30px !important;
+  height: 30px !important;
+  background-position: center;
+  background-size: 200%;
+  border-radius: 50px;
+  margin: 0 2px;
+}
+
+.logi_ue_product_shop {
+  text-align: left;
+  font-weight: bold;
+  font-family: "News Gothic Std";
+}
+.logi_ue_product_shop .logi_price {
+  display: block;
+  font-size: 18px;
+}
+.logi_ue_product_shop .logi_button,
+.logi_ue_product_shop .logi_button_video {
+  font-size: 16px;
+  background: #000;
+  display: inline-block;
+  color: #fff !important;
+  padding: 10px 20px;
+}
+
+.logi_ue #logi_categories_fixed .logi_ue_news a {
+}
+#logi_categories h2 .logi_ue_news span {
+  font-size: 15px;
+  line-height: 15px;
+  vertical-align: middle;
+}
+
+.logi_ue #logi_categories_fixed .logi_ue_news a span,
+#logi_categories h2 .logi_ue_news span {
+  color: #ffffff;
+  background: #2100ff;
+  padding: 5px 10px;
+  display: inline-block;
+  -webkit-animation: color_change 0.5s infinite alternate;
+  -moz-animation: color_change 0.5s infinite alternate;
+  -ms-animation: color_change 0.5s infinite alternate;
+  -o-animation: color_change 0.5s infinite alternate;
+  animation: color_change 0.5s infinite alternate;
+}
+
+@-webkit-keyframes color_change {
+  from {
+    color: #ffffff;
+  }
+  to {
+    background: #666;
+  }
+}
+@-moz-keyframes color_change {
+  from {
+    color: #ffffff;
+  }
+}
+to {
+  background: #666;
+}
+@-ms-keyframes color_change {
+  from {
+    color: #ffffff;
+  }
+  to {
+    background: #666;
+  }
+}
+@-o-keyframes color_change {
+  from {
+    color: #ffffff;
+  }
+  to {
+    background: #666;
+  }
+}
+@keyframes color_change {
+  from {
+    color: #ffffff;
+  }
+  to {
+    background: #666;
+  }
+}
+#logi_wonderboom .logi_ue_loop,
+#powerup .logi_ue_loop {
+  padding: 0px 0 20px !important;
+}
+#logi_wonderboom .logi_ue_loop .logi_ue_prod_slide,
+#powerup .logi_ue_loop .logi_ue_prod_slide {
+  height: 380px !important;
+}
+.logi_ue #logi_slider {
+  height: auto;
+}
+.logi_ue #logi_pop_contact {
+  font-family: "News Gothic Std";
+}
+.logi_ue #logiform_contact input,
+.logi_ue #logiform_contact textarea,
+.logi_ue #logiform_contact p {
+  font-family: Arial, sans-serif;
+}
+#wonderboom2.logi_section .logi_ue_loop {
+  padding: 0;
+}
+
+/* ==========================================================================
+   VC
+   ========================================================================== */
+.logi_fixedheight #logi_slider {
+  height: 450px !important;
+}
+.logi_vc {
+  background: #fff;
+}
+.logi_vc #logi_categories_fixed {
+  padding: 10px 0;
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+.logi_vc .logi_categories_menu {
+  margin: 0 auto;
+}
+.logi_vc .logi_cats_gamming_ul {
+  width: 80%;
+}
+.logi_vc .logi_cats_gamming_ul li {
+  height: auto;
+}
+.logi_vc .logi_cats_gamming_ul li a {
+}
+.logi_vc .logi_cats_gamming_ul li a span {
+  display: block;
+  margin: 5px auto 0;
+  font-family: Brown-Pro-bold;
+  font-size: 14px;
+  color: #333;
+  padding: 5px;
+}
+
+#logi_max_container.logi_vc #logi_categories li img {
+  width: 100%;
+  left: 0%;
+  position: relative;
+}
+#logi_max_container.logi_vc #logi_categories li:hover img {
+  background: none;
+  max-width: none;
+  width: 150%;
+  left: -25%;
+  top: -25%;
+  position: relative;
+}
+
+#logi_max_container.logi_vc #logi_categories li:hover:nth-child(3) img {
+  top: -100px;
+}
+#logi_max_container.logi_vc #logi_categories li:hover:nth-child(4) img {
+  top: -100px;
+}
+#logi_max_container.logi_vc #logi_categories li:hover .vc_cont_catimg {
+  max-height: 140px;
+}
+#logi_max_container.logi_vc #logi_categories .vc_cont_catimg {
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.logi_vc #logi_categories {
+  background: #f5f4f4;
+}
+.logi_vc #logi_categories img {
+  max-width: 220px;
+}
+.logi_vc #logi_categories h2 {
+  color: #333;
+  font-family: Brown-Pro-Bold;
+}
+.logi_vc #logi_categories p {
+  margin: 10px auto 15px;
+}
+
+.logi_vc .logi_loop_img {
+  background-color: #f6f6f6;
+  padding: 40px 20px 30px;
+  position: relative;
+}
+.logi_vc .logi_loop_img img {
+  background-color: transparent;
+  position: relative;
+}
+.logi_vc .item_loop {
+  background: #fff;
+  padding: 0 20px 20px;
+  width: 28%;
+  max-width: none;
+  margin: 20px 0px;
+  border: solid 1px #fff;
+}
+.logi_vc .item_loop .logi_vc_ico_angle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60px;
+  padding: 10px;
+  background: #f6f6f6;
+}
+.logi_vc .item_loop:hover {
+  border: solid 1px #ccc;
+}
+/*.logi_vc .logi_cols_3 .item_loop:hover .logi_loop_img{    background-color: #333; }*/
+.logi_vc .item_loop:hover:nth-child(6n + 1) .logi_loop_img {
+  background-color: #ff7f2c;
+}
+.logi_vc .item_loop:hover:nth-child(6n + 2) .logi_loop_img {
+  background-color: #dcfd00;
+}
+.logi_vc .item_loop:hover:nth-child(6n + 3) .logi_loop_img {
+  background-color: #814efa;
+}
+.logi_vc .item_loop:hover:nth-child(6n + 4) .logi_loop_img {
+  background-color: #00b8fc;
+}
+.logi_vc .item_loop:hover:nth-child(6n + 5) .logi_loop_img {
+  background-color: #ff2947;
+}
+.logi_vc .item_loop:hover:nth-child(6n + 6) .logi_loop_img {
+  background-color: #00ead0;
+}
+
+#logi_max_container.logi_vc ul.logi_loop_especs {
+  font-size: 13px;
+  text-align: left;
+  margin: 10px 0 0 5px;
+  color: #333;
+}
+.logi_vc .logi_loop_especs li {
+  list-style-type: disc;
+  color: #676565;
+}
+.logi_vc .logi_loop_especs li.logi_vc_spec_tit {
+  font-family: Brown-Pro-Bold;
+  margin: 5px 0 0 0;
+  list-style-type: none;
+}
+#logi_max_container.logi_vc .logi_button {
+  background: #2f3132;
+  color: #dcfd00;
+  padding: 10px 15px;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+#logi_max_container.logi_vc .logi_button_video {
+  background: #ececec;
+  color: #2f3132;
+}
+#logi_max_container.logi_vc .logi_price {
+  display: block;
+  margin: 15px 0 0 0;
+  color: #333;
+  font-size: 18px;
+  border-top: solid 1px #dcdcdc;
+  padding-top: 10px;
+}
+#logi_max_container.logi_vc .item_loop h3 {
+  font-family: Brown-Pro-Bold;
+  color: #333;
+}
+
+#logi_max_container.logi_vc .vc_ico {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  background: none;
+  max-width: 320px;
+  margin: 10px 0;
+  min-height: auto;
+}
+#logi_max_container.logi_vc .vc_spec_icos {
+  margin: 0 0 5px 0;
+  list-style-type: none;
+}
+
+#logi_max_container.logi_vc #logi_categories_fixed li {
+  width: auto;
+}
+#logi_max_container.logi_vc .vc_logo_slider {
+  max-width: 150px;
+  margin: 0 0 15px;
+}
+
+#logi_max_container.logi_vc #audifonos .item_loop {
+  width: 45%;
+  background: #f6f6f6;
+}
+#logi_max_container.logi_vc #audifonos .logi_loop_img,
+.logi_vc #audifonos .logi_loop_especs {
+  display: inline-block;
+  vertical-align: middle;
+}
+#logi_max_container.logi_vc #audifonos .logi_loop_img {
+  width: 55%;
+}
+#logi_max_container.logi_vc #audifonos .logi_loop_especs {
+  width: 30%;
+  margin-left: 15px;
+  padding-left: 0;
+}
+
+#logi_max_container.logi_vc #accesorios .item_loop {
+  width: 20%;
+  background: #f6f6f6;
+}
+#logi_max_container.logi_vc .nw_arrows {
+  background: none;
+}
+
+#logi_max_container.logi_vc #logi_slider .logi_slider_text {
+  width: 45%;
+  display: none;
+}
+#logi_max_container.logi_vc #logi_slider {
+  height: auto;
+}
+#logi_max_container.logi_vc #audifonos .item_loop.logi_vc_featured {
+  width: 94%;
+  background: #e8e7e7;
+  margin: 20px 0px 0;
+}
+#logi_max_container.logi_vc #audifonos .logi_loop_img {
+  padding: 20px 20px 20px;
+}
+#logi_max_container.logi_vc
+  #audifonos
+  .item_loop.logi_vc_featured
+  .logi_loop_img {
+  background: #e8e7e7;
+}
+#logi_max_container.logi_vc #audifonos .logi_vc_featured .logi_vc_bloque {
+  display: inline-block;
+  width: 25%;
+  vertical-align: middle;
+}
+#logi_max_container.logi_vc #audifonos .logi_vc_featured .logi_loop_img {
+  width: 50%;
+  vertical-align: middle;
+}
+#logi_max_container.logi_vc #audifonos .logi_vc_featured .logi_loop_especs {
+  width: 45%;
+  vertical-align: middle;
+}
+#logi_max_container.logi_vc #audifonos .logi_vc_featured h3 {
+  color: #824ef9;
+  font-size: 35px;
+  line-height: 35px;
+  margin: 10px 0;
+}
+#logi_max_container.logi_vc
+  #audifonos
+  .logi_vc_featured:hover:nth-child(1)
+  .logi_loop_img {
+  background: #e8e7e7;
+}
+
+#logi_max_container.logi_vc #accesorios .item_loop.logi_vc_featured_list {
+  width: 94%;
+  background: #e4e4e4;
+}
+#logi_max_container.logi_vc #accesorios .logi_loop_img {
+  padding: 20px 20px 20px;
+}
+#logi_max_container.logi_vc
+  #accesorios
+  .item_loop.logi_vc_featured_list
+  .logi_loop_img {
+  background: transparent;
+}
+#logi_max_container.logi_vc #accesorios .logi_vc_featured_list .logi_vc_bloque {
+  display: inline-block;
+  width: 25%;
+  vertical-align: middle;
+}
+#logi_max_container.logi_vc #accesorios .logi_vc_featured_list .logi_loop_img {
+  width: 65%;
+  vertical-align: middle;
+  display: inline-block;
+}
+#logi_max_container.logi_vc
+  #accesorios
+  .logi_vc_featured_list
+  .logi_loop_especs {
+  width: 25%;
+  vertical-align: middle;
+  display: inline-block;
+}
+#logi_max_container.logi_vc .vc_feat_title h3 {
+  color: #01b8fc;
+  font-size: 35px;
+  line-height: 35px;
+  margin: 20px 0 0;
+}
+#logi_max_container.logi_vc .vc_feat_title p {
+}
+#logi_max_container.logi_vc
+  #accesorios
+  .logi_vc_featured_list:hover:nth-child(1)
+  .logi_loop_img {
+  background: transparent;
+}
+#logi_max_container.logi_vc .vc_feat_title {
+  list-style-type: none;
+}
+
+/* ==========================================================================
+   JAYBIRD
+   ========================================================================== */
+.logi_jaybird,
+#logi_max_container.logi_jaybird h2 {
+  font-family: "Work Sans", sans-serif !important;
+}
+.logi_jaybird #logi_slider {
+  height: 400px;
+}
+#logi_slider .logi_black .logi_slider_text {
+  color: #000 !important;
+}
+.logi_jaybird #logi_slider .logi_slider_text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 70px;
+  line-height: 60px;
+  text-align: left !important;
+  right: auto;
+  float: left;
+}
+.logi_jaybird #logi_slider .logi_slider_text img {
+  width: 110px;
+  margin: 0;
+}
+.logi_jaybird #logi_slider .logi_slider_text p {
+  margin: 0 !important;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.logi_jaybird #logi_slider .slick-slide {
+  background-position: top center;
+}
+.logi_jaybird .nw_arrows {
+  background: none;
+}
+
+.logi_jaybird .logi_categories_menu li a {
+  text-align: left;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.logi_jaybird #logi_categories {
+  height: auto !important;
+}
+.logi_jaybird .logi_categories_menu li:hover a {
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%);
+}
+
+.logi_jaybird .logi_categories_menu li {
+  margin: 0 5px;
+}
+.logi_jaybird .logi_categories_menu {
+  margin: 15px auto;
+}
+.logi_jaybird .logi_categories_menu li a img.logi_j_prod {
+  position: relative;
+  z-index: 1;
+  width: 100% !important;
+  height: auto !important;
+}
+.logi_jaybird .logi_categories_menu li a img.logi_j_bg {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.logi_jaybird .logi_j_over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(243, 243, 243, 0.7);
+  z-index: 1;
+}
+.logi_jaybird .logi_categories_menu li:hover .logi_j_over {
+  background: rgba(243, 243, 243, 0.3);
+}
+
+.logi_jaybird .logi_ue_product_features {
+  width: 20%;
+}
+.logi_jaybird .logi_ue_product_slidercolors {
+  width: 30%;
+}
+.logi_jaybird .logi_ue_product_features .logi_j_row_feat {
+  margin: 15px 0;
+}
+.logi_jaybird .logi_ue_product_features .logi_j_row_feat img {
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 40px !important;
+}
+.logi_jaybird .logi_ue_product_features .logi_j_row_feat span {
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 180px !important;
+  text-align: left;
+  margin-left: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.logi_jaybird .logi_ue_product_slidercolors .nw_arrows {
+  background: #484848;
+}
+.logi_jaybird #logi_categories_fixed li {
+  height: auto !important;
+}
+.logi_jaybird #logi_categories_fixed li a {
+  background-image: none !important;
+  background: #ececec;
+}
+.logi_jaybird #logi_categories_fixed li:hover .logi_j_over {
+  background: rgba(243, 243, 243, 0.7);
+}
+.logi_jaybird #logi_categories_fixed li span {
+  display: block;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  color: #000 !important;
+}
+
+.logi_jaybird .logi_ue_circle {
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.logi_jaybird .logi_ue_circle .logo_j_color {
+  width: 50%;
+  height: 60px;
+  float: left;
+}
+.logi_jaybird .logi_ue_loop {
+  padding: 10px 0;
+}
+.logi_jaybird .log_j_ov {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(94, 94, 94, 0.29);
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   BLUE
+   ========================================================================== */
+.logi_blue {
+  background: #fff;
+}
+#logi_blue_logo {
+  background: #e1e1e1;
+  text-align: center;
+}
+#logi_blue_logo img {
+  width: 90px;
+}
+.logi_blue #logi_categories h2 {
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: normal;
+  font-family: "TiemposHeadline-BoldItalic";
+}
+.logi_blue #logi_categories p {
+  font-size: 16px;
+  font-family: "articulat_cftext";
+}
+.logi_blue .logi_categories_menu li a {
+  position: relative;
+}
+.logi_blue .logi_categories_menu li a span {
+  display: block;
+  position: relative;
+  width: 250px;
+  margin: -15% auto 0;
+  background: #4d4d4d;
+  color: #fff;
+  padding: 11px 0;
+  font-family: "articulat_cfheavy";
+  font-weight: normal;
+  background-color: #c7a04a;
+  border-radius: 0.4em;
+}
+.logi_blue .logi_categories_menu li:hover span {
+  background-color: #1c3f94;
+}
+.logi_blue #logi_categories_fixed li {
+  height: auto;
+  vertical-align: middle;
+}
+.logi_blue #logi_categories_fixed li a span {
+  width: auto;
+  margin: 0 auto 0;
+  padding: 8px 0;
+  font-size: 14px;
+  line-height: 12px;
+}
+.logi_blue #logi_categories_fixed li img {
+  width: 60px;
+}
+.logi_blue #logi_categories_fixed.fixed {
+  background: #e1e1e1;
+  padding: 5px 0;
+}
+
+.logi_blue #logi_slider .slick-slide {
+  background-color: #363636;
+  background-position: top center;
+  background-size: cover;
+}
+.logi_blue .nw_arrows {
+  background: none;
+}
+.logi_blue .logi_ue_title2,
+.logi_blue .logi_slider_title1 {
+  display: block;
+  font-family: "articulat_cflight";
+  font-size: 50px;
+  line-height: 55px;
+  font-family: "TiemposHeadline-BoldItalic";
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.22);
+  text-align: left;
+}
+
+.logi_blue .logi_loop {
+  margin: 0 auto 30px !important;
+}
+
+.logi_blue .item_loop {
+  background: #f1f1f1;
+  text-align: center;
+  margin: 0 10px 30px 0;
+  width: auto;
+  max-width: 294px;
+  display: table-cell;
+  border: solid 4px #fff;
+}
+
+.logi_blue .item_loop h3 {
+  font-family: "TiemposHeadline-BoldItalic";
+  font-size: 1.6em;
+  color: #363636;
+  text-align: center;
+  border-bottom: solid 1px #666;
+  padding-bottom: 15px;
+  width: 80%;
+  margin: 30px auto 10px;
+}
+.logi_blue .item_loop h3 span {
+  position: relative;
+  top: -0.5em;
+  vertical-align: baseline;
+  font-family: "articulat_cflight";
+  font-weight: normal;
+  font-size: 45%;
+  line-height: 0;
+  text-transform: uppercase;
+  margin-left: 5px;
+  color: #9e9e9e;
+}
+.logi_blue .item_loop p {
+  width: 80%;
+  text-align: center;
+  color: #767676;
+}
+.logi_blue .logi_loop_especs {
+  width: 70%;
+}
+.logi_blue .logi_loop_especs li {
+  text-align: left;
+  font-size: 13px;
+  line-height: 16px;
+  list-style-type: disc;
+  color: #767676;
+}
+
+.logi_blue .item_loop .logi_button {
+  display: inline-block;
+  padding: 0.5em 1em 0.4em;
+  border-radius: 0.4em;
+  background-color: #1c3f94;
+  color: #fff !important;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.logi_blue .item_loop .logi_button_video {
+  background-color: #aaa;
+}
+.logi_blue .logi_ue_prod_slide {
+  height: auto;
+  width: 100%;
+  max-width: 294px;
+}
+.logi_blue .logi_ue_product_slidercolors {
+  width: 100%;
+  margin: 0;
+}
+.logi_blue .logi_colors .logi_ue_circle {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 5px 0 0 0;
+  float: none;
+  border: solid 2px #fff;
+}
+.logi_blue .logi_loop_img {
+  position: relative;
+}
+.logi_blue .logi_colors {
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+}
+.logi_blue .logi_colors {
+  width: 25px;
+}
+.logi_blue .item_loop .nw_arrows {
+  display: none !important;
+}
+.logi_blue #logiform_contact,
+.logi_blue #logiform_contact input,
+.logi_blue #logiform_contact textarea {
+  font-family: "articulat_cftext";
+}
+.logi_blue #logiform_contact #logiform_submit {
+  background-color: #1c3f94;
+  cursor: pointer;
+  border-radius: 0.4em;
+}
+.logi_blue #logiform_contact input,
+.logi_blue #logiform_contact textarea {
+  border-radius: 0.4em;
+  border: solid 1px #ccc;
+}
+.logi_blue .logi_banner {
+  padding-bottom: 30px;
+}
+.logi_blue #logi_slider {
+  height: auto;
+}
+.logi_blue #logi_slider .logi_slider_text {
+  text-align: left;
+  margin: 0;
+  position: absolute;
+  right: auto;
+  left: 10%;
+}
+
+/* ==========================================================================
+   CORE
+   ========================================================================== */
+.logi_core .logi_ue_prod_slide {
+  height: auto;
+  width: 100%;
+  max-width: 294px;
+}
+.logi_core .logi_ue_product_slidercolors {
+  width: 100%;
+  margin: 0;
+}
+.logi_core .logi_colors .logi_ue_circle {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 5px 5px 0 0;
+  float: none;
+  border: solid 2px #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+.logi_core .logi_loop_img {
+  position: relative;
+}
+.logi_core .logi_colors {
+  width: 90%;
+  margin: 10px auto 0 !important;
+  position: absolute;
+}
+.logi_core .item_loop .nw_arrows {
+  display: none !important;
+}
+.logi_core .item_loop {
+  width: 21%;
+}
+.logi_core .item_loop .logi_loop_especs {
+  display: none;
+  position: absolute;
+  top: 95%;
+  left: -6px;
+  background: white;
+  padding: 10px 20px 20px 40px;
+  border: solid 1px #ccc;
+  border-top: none;
+  z-index: 100;
+  width: calc(100% - 60px);
+}
+.logi_core .item_loop:hover .logi_loop_especs {
+  display: block;
+}
+#logi_max_container.logi_core ul.logi_loop_especs {
+  padding: 10px 20px 20px 40px;
+  width: calc(100% - 60px);
+}
+.logi_core .logi_loop_img {
+  padding: 30px 20px 60px;
+}
+.logi_core #logi_slider {
+  height: calc(80vh);
+}
+.logi_core #logi_slider .slick-slide {
+  background-position: center !important;
+}
+
+#logi_top_logo {
+  position: absolute;
+  z-index: 1;
+  padding: 20px 0;
+}
+#logi_top_logo img {
+  max-width: 150px;
+}
+.logi_core #logi_categories h2 {
+  margin: 0 0 20px auto;
+}
+.logi_core .logi_categories_menu li:hover {
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#logi_max_container.logi_core #logi_categories li:hover img {
+  background: none;
+  max-width: 220px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: relative;
+}
+
+/* ==========================================================================
+   TOP FEATURED - OCASIONAL
+   ========================================================================== */
+#vc_top_featured {
+  text-align: center;
+  padding: 40px 0;
+  background: #7057a9;
+}
+#vc_top_featured .logi_clearfix {
+  max-width: 80%;
+}
+#vc_top_featured .vc_top_featured_title {
+  margin: 0 auto 20px;
+  text-align: center;
+  color: #fff !important;
+  font-size: 40px;
+}
+#vc_top_featured li.item_loop {
+  position: relative;
+  display: inline-block;
+  width: 47%;
+  padding: 0;
+  border: none !important;
+  vertical-align: top;
+  text-align: left;
+  background: none;
+  border-right: solid 1px #fff !important;
+  margin-right: 2%;
+}
+#vc_top_featured .item_loop:last-child {
+  border-right: none !important;
+  margin-right: 0;
+}
+#vc_top_featured li h3 {
+  margin: 10px auto;
+  text-align: left;
+  color: #ffffff !important;
+  font-size: 27px;
+  line-height: 31px;
+  background: rgba(255, 255, 255, 0.24);
+  padding: 10px 0px;
+  text-align: center;
+  width: 85%;
+}
+#vc_top_featured li h3 span {
+  font-family: Brown-Pro-Regular;
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+  color: #2f3132 !important;
+}
+#vc_top_featured li .logi_loop_img {
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  background-color: transparent;
+  max-width: 600px;
+}
+#vc_top_featured li .logi_loop_img img {
+}
+#vc_top_featured .item_loop:hover .logi_loop_img {
+  background-color: transparent;
+}
+#vc_top_featured .logi_loop_especs {
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35%;
+}
+#vc_top_featured .logi_loop_especs li {
+  color: #fff;
+}
+#vc_top_featured .vc_spec_icos {
+}
+#vc_top_featured .vc_spec_icos img {
+}
+#vc_top_featured .logi_price {
+}
+#vc_top_featured .logi_button {
+  margin: 0 15px;
+}
+
+/*STLYE 2 FEATURED*/
+#vc_top_featured.vc_top_featured_style2 li.item_loop {
+  width: 32%;
+  text-align: center;
+  background: #fff;
+  padding: 0px 0 30px;
+  margin: 0 5px;
+}
+#vc_top_featured.vc_top_featured_style2 li h3 {
+  font-size: 22px;
+  line-height: 25px;
+  margin: 15px auto 0 !important;
+  color: #333 !important;
+  background: #eaeaea;
+}
+#vc_top_featured.vc_top_featured_style2 li h3 span {
+  font-size: 15px;
+}
+#vc_top_featured.vc_top_featured_style2 li .logi_loop_img {
+  width: 100%;
+  height: calc(38vh);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#vc_top_featured.vc_top_featured_style2 {
+  background: #ff7f2c;
+}
+
+.logilocal .logi_ss_4 {
+  background-position: top center !important;
+}
+.logilocal .logi_ss_5 {
+  background-position: top center !important;
+}
+.logilocal .logi_ss_6 {
+  background-position: top center !important;
+}
+
+.logilocal .logi_ss_4 .logi_slider_title1,
+.logilocal .logi_ss_5 .logi_slider_title1,
+.logilocal .logi_ss_6 .logi_slider_title1 {
+  font-size: 46px !important;
+  line-height: 43px !important;
+  color: #000;
+  display: block;
+}
+
+.logilocal .logi_ss_4 .logi_slider_title2,
+.logilocal .logi_ss_5 .logi_slider_title2,
+.logilocal .logi_ss_6 .logi_slider_title2 {
+  font-size: 35px !important;
+  line-height: 37px !important;
+  margin-top: 20px !important;
+  display: block;
+  color: #000;
+}
+
+.logilocal .logi_ss_4 .logi_slider_title1,
+.logilocal .logi_ss_4 .logi_slider_title2 {
+  color: #fff;
+}
+
+.logilocal .logi_ss_4 .logi_slider_text {
+  width: 30% !important;
+}
+.logilocal .logi_ss_5 .logi_slider_text {
+  width: 32% !important;
+  left: 50%;
+  margin-left: -10% !important;
+  top: 40% !important;
+}
+.logilocal .logi_ss_6 .logi_slider_text {
+  width: 32% !important;
+  float: right;
+  margin-right: 10% !important;
+}
+
+/*GENERIC POP*/
+.contpops {
+  background: rgba(255, 255, 255, 0.41);
+}
+.contpops .logi_close_pop {
+  color: #000;
+}
+.contpops .logi_pop_container {
+  background: #fff;
+  text-align: center;
+}
+.logi_puntos_link {
+  display: inline-block;
+  width: 17%;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.logi_puntos_link img {
+  display: block;
+}
+.logi_puntos_link:hover {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+#logi_puntos_venta {
+  padding-bottom: 20px;
+}
+
+/*AJUSTE LAWGAMERS PERU*/
+.lawgamers.com figure {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media screen and (max-width: 1350px) {
+  #vc_top_featured .logi_clearfix {
+    max-width: 90%;
+  }
+  #vc_top_featured.vc_top_featured_style2 li h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #vc_top_featured.vc_top_featured_style2 li h3 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  #vc_top_featured .vc_top_featured_title {
+    font-size: 25px;
+  }
+  #vc_top_featured .logi_clearfix {
+    max-width: 95%;
+  }
+  #vc_top_featured.vc_top_featured_style2 li.item_loop {
+    width: 30%;
+  }
+  #vc_top_featured.vc_top_featured_style2 li .logi_loop_img {
+    height: 245px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logi_categories_menu li {
+    width: 20%;
+    margin: 0 0 5px;
+  }
+  .logi_astro #logi_categories li {
+    width: 15%;
+  }
+  .logi_loop .item_loop {
+    width: 50%;
+    border: none !important;
+    margin: 0 auto 10px;
+  }
+  .logi_clearfix {
+    max-width: 90%;
+  }
+  .logi_astro_title {
+    right: 0;
+    width: 30%;
+  }
+  .logi_astro .item_loop:nth-child(odd) {
+    margin: 0;
+  }
+  .logi_astro .logi_loop {
+    width: 70%;
+  }
+  #a10 .item_loop:nth-child(odd) {
+    margin: 6% -15% 0 0%;
+  }
+  #logi_pop .logi_pop_container {
+    width: 80%;
+  }
+  #vc_top_featured.vc_top_featured_style2 li .logi_loop_img {
+    height: 245px;
+    background-size: 95%;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logi_gamming #logi_banner {
+    height: 400px;
+  }
+  .logi_gamming .logi_categories_menu li {
+    height: 180px;
+  }
+  .logi_loop .item_loop {
+    width: 48% !important;
+    margin: 0 10px 30px 0 !important;
+  }
+  .logi_cols_2 .item_loop {
+    width: 80% !important;
+  }
+  .logi_gamming :hover {
+    width: inherit;
+  }
+  .logi_astro .logi_button:hover {
+    padding: 10px 40px;
+  }
+  .logi_astro .logi_button {
+    padding: 10px 50px;
+    margin: 0;
+  }
+  #logi_pop .logi_pop_container {
+    width: 90%;
+    top: 0;
+    margin: 150px auto 0;
+  }
+  #logi_pop {
+    background: rgba(0, 0, 0, 0.59);
+  }
+
+  #logi_max_container.logi_vc .logi_loop .item_loop {
+    width: 42% !important;
+    margin: 0 auto 30px 0 !important;
+  }
+  #logi_max_container.logi_vc #audifonos,
+  #logi_max_container.logi_vc #accesorios {
+    background: #f6f6f6;
+  }
+  #logi_max_container.logi_vc #audifonos .logi_loop_img,
+  #logi_max_container.logi_vc #audifonos .logi_loop_especs {
+    display: block;
+    width: auto;
+  }
+  #logi_max_container.logi_vc .logi_loop_img {
+    padding: 10px;
+  }
+  #logi_max_container.logi_vc #accesorios .item_loop {
+    width: 27% !important;
+  }
+  #vc_top_featured li .logi_loop_img,
+  #logi_max_container.logi_vc ul.logi_loop_especs {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  #vc_top_featured li h3 {
+    margin: 10px;
+  }
+  #vc_top_featured .logi_clearfix {
+    max-width: 90%;
+  }
+  #vc_top_featured .vc_top_featured_title {
+    font-size: 20px;
+  }
+  #vc_top_featured.vc_top_featured_style2 li:nth-child(2) h3 {
+    padding: 32px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logi_gamming #logi_banner {
+    height: auto;
+  }
+  #logi_banner img {
+    display: block;
+    max-width: 80%;
+  }
+  .logi_banner {
+    height: auto;
+  }
+  .logi_astro .logi_banner.sep {
+    height: 300px;
+    background-size: cover;
+    background-position: 30% center;
+    background-attachment: initial;
+  }
+  .logi_gamming .logi_categories_menu li {
+    width: 40%;
+    margin: 0 0 5px;
+  }
+  .logi_gamming .logi_loop_theme_2 .logi_button,
+  .logi_loop_theme_3 .logi_button {
+    position: relative !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+  }
+  .logi_gamming .logi_loop_theme_3 h3 {
+    margin-bottom: -10% !important;
+  }
+  .logi_gamming .logi_loop_theme_4 h3 {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+  .logi_gamming #logi_max_container p {
+    margin: 0px 20px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .logi_gamming .logi_button {
+    font-size: 15px;
+  }
+
+  .logi_astro #logi_categories li img {
+    display: none;
+  }
+  .logi_astro .item_loop .logi_astro_loop_detail {
+    margin-top: 0;
+  }
+  .logi_astro .logi_button {
+    margin: 10px;
+  }
+  .logi_astro .item_loop:nth-child(even) {
+    margin: 0;
+  }
+  .logi_astro .item_loop:nth-child(even) .logi_astro_loop_detail {
+    margin: 0;
+    text-align: left;
+  }
+  #logi_max_container .logi_astro_footer img {
+    width: 200%;
+    max-width: 200%;
+    margin: 0 0 0 -50%;
+  }
+  #logi_max_container.logi_gamming .logi_banner img {
+    width: 200%;
+    max-width: 200%;
+    margin-left: -100%;
+  }
+  #logi_max_container.logi_gamming #logi_banner img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0%;
+  }
+
+  .logi_loop .item_loop {
+    width: 70% !important;
+  }
+  .logi_cols_2 .item_loop {
+    width: 80% !important;
+  }
+  .logi_gamming .logi_price {
+    margin-bottom: 10px !important;
+  }
+  #a10zelda .logi_zelda_col {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  #logi_ue_header {
+    position: absolute;
+  }
+  .logi_ue #logi_slider {
+    height: 350px;
+  }
+  .logi_ue #logi_slider .logi_slider_text {
+    top: 0;
+    float: none;
+    margin: 0 auto;
+    width: 80% !important;
+    padding: 170px 0 60px;
+    right: 0%;
+    left: 0%;
+  }
+  .logi_ue #logi_slider .logi_slider_text .logi_slider_title2 {
+    font-size: 30%;
+    line-height: 100%;
+  }
+  .logi_ue #logi_slider .logi_slider_text .logi_slider_title1 {
+    font-size: 50%;
+    line-height: 100%;
+  }
+  .logi_ue .logi_ss_1 .ult {
+    left: 10px;
+  }
+  .logi_ue .logi_ss_1 .logi_slider_text {
+    padding: 240px 0 0px !important;
+  }
+  .logi_ue_loop,
+  .logi_jaybird .logi_ue_loop {
+    padding: 30px 0;
+  }
+  .logi_ue_product_features,
+  .logi_ue_product_shop,
+  .logi_ue_product_slidercolors {
+    display: block;
+    width: 100%;
+  }
+  .logi_ue_product_slidercolors {
+    width: 90%;
+    margin: 30px 5%;
+  }
+  .logi_ue_prod_slide {
+    height: 300px;
+  }
+  .logi_ue #logi_slider .logi_ss_1,
+  .logi_ue #logi_slider .logi_ss_4 {
+    background-position: center;
+  }
+
+  #logi_max_container.logi_vc ul.logi_loop_especs {
+    width: 85%;
+    margin: 15px auto;
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    border: none;
+    padding: 10px 20px;
+    z-index: 0;
+  }
+  .logi_core .logi_colors {
+    position: relative;
+  }
+  #logi_max_container.logi_vc .logi_slider_title1 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  #logi_max_container.logi_vc #logi_slider .slick-slide {
+    background-position: center;
+  }
+  #logi_max_container.logi_vc .logi_banner > img {
+    width: 160%;
+    max-width: none;
+  }
+  #logi_max_container.logi_vc .logi_loop .item_loop {
+    margin: 0 auto 50px !important;
+    padding: 0;
+    width: 100% !important;
+  }
+  #logi_max_container.logi_vc #audifonos .logi_vc_featured .logi_vc_bloque,
+  #logi_max_container.logi_vc #audifonos .logi_vc_featured .logi_loop_img,
+  #logi_max_container.logi_vc #audifonos .logi_vc_featured .logi_loop_especs {
+    display: block;
+    width: auto;
+    padding: 10px 15px;
+  }
+  #logi_pop .logi_pop_container,
+  #logi_pop_contact .logi_pop_container {
+    width: 90%;
+    top: 50px;
+    margin: 0px auto 0;
+  }
+  #logiform_contact span {
+    font-size: 12px;
+    display: block;
+    width: auto;
+    text-align: center;
+    margin: 0 auto 10px;
+  }
+  #logiform_contact input,
+  #logiform_contact textarea {
+    width: 90%;
+    display: block;
+  }
+
+  .logi_jaybird #logi_slider .logi_slider_text {
+    padding: 80px 0 60px;
+  }
+  .logi_jaybird #logi_slider .slick-slide {
+    background-position: 60% 0;
+  }
+  .logi_jaybird .logi_ue_product_features {
+    width: 100%;
+  }
+  .logi_jaybird .log_j_ov {
+    display: block;
+  }
+  .logi_jaybird .logi_ue_product_slidercolors {
+    width: 90%;
+    margin: 30px auto;
+    display: block;
+  }
+  .logi_colors .logi_ue_circle {
+    margin: 0 5px;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .logi_jaybird #logi_slider .slick-slide:nth-child(3) {
+    background-position: 69% 0;
+  }
+
+  .logi_blue #logi_slider {
+    height: 180px;
+  }
+  .logi_blue .logi_loop .item_loop {
+    margin: 20px 10px 30px 0 !important;
+    display: block;
+    padding: 10px 0 0 0;
+  }
+
+  #vc_top_featured li.item_loop {
+    display: block;
+    width: 100%;
+    border-right: none !important;
+    margin-right: 0;
+    border-bottom: solid 1px #fff !important;
+    padding-bottom: 15px;
+  }
+  #vc_top_featured li.item_loop:last-child {
+    border: none !important;
+    padding-bottom: 0px;
+  }
+  .logi_puntos_link {
+    width: 27% !important;
+  }
+  #vc_top_featured.vc_top_featured_style2 li.item_loop {
+    width: auto;
+    display: block;
+    overflow: auto;
+    margin: 10px 0px !important;
+    padding: 0px 0 30px;
+  }
+  #vc_top_featured.vc_top_featured_style2 li .logi_loop_img {
+    background-size: cover;
+  }
+  #vc_top_featured.vc_top_featured_style2 li:nth-child(2) h3 {
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logi_puntos_link {
+    width: 43% !important;
+  }
+  #logi_categories {
+    display: none;
+  }
+  .logi_astro .logi_banner.video {
+    height: 200px;
+  }
+  .logi_astro_title,
+  .logi_astro .logi_loop {
+    right: auto;
+    width: 100%;
+    float: none;
+  }
+  .logi_loop .item_loop {
+    width: 100% !important;
+    margin: 0 10px 50px 0 !important;
+    display: block;
+  }
+  .logi_gamming .logi_button,
+  .logi_gamming .logi_loop_theme_2 .logi_button,
+  .logi_loop_theme_3 .logi_button {
+    font-size: 15px;
+    font-size: 15px;
+    display: block;
+    margin: 0 0 5px !important;
+    padding: 10px;
+    width: 100px;
+  }
+  .logi_gamming .logi_loop_theme_1 .logi_button {
+    margin: 0px 0 5px 46% !important;
+  }
+  .logi_gamming .logi_button:hover {
+    width: 100px;
+    font-size: 15px;
+  }
+
+  #logi_slider .nw_arrows {
+    display: none !important;
+  }
+  #logi_slider .logi_slider_text {
+    font-size: 100%;
+    line-height: 100%;
+    width: 40% !important;
+    margin: 0 0 0 30px;
+    top: 0;
+    padding: 30px 0;
+  }
+  #logi_slider .slick-slide {
+    min-height: 150px;
+  }
+  #logi_max_container.logi_vc #logi_slider .slick-slide {
+    min-height: 20px;
+  }
+  img,
+  img:focus {
+    border: none !important;
+  }
+  #logi_max_container {
+    overflow: hidden;
+    width: 100%;
+  }
+  #logi_max_container.logi_vc #accesorios .item_loop {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .logi_ue #logi_categories {
+    height: 170px !important;
+    padding: 20px 0 !important;
+  }
+  /*.logi_gamming #logi_categories{     height: 180px!important;    padding: 20px 0!important;  }*/
+  .logi_ue .logi_categories_menu li a img {
+    width: auto !important;
+    height: 85px !important;
+    max-width: none !important;
+  }
+  .logi_ue .logi_categories_menu {
+    width: 70%;
+    margin: auto;
+  }
+  .logi_gamming .logi_categories_menu {
+    width: 80%;
+    margin: auto;
+  }
+  #logi_max_container.logi_ue h2 {
+    font-size: 23px !important;
+  }
+  #logi_max_container.logi_ue p {
+    margin: 5px auto !important;
+  }
+  .logi_gamming .logi_categories_menu li {
+    height: 120px !important;
+  }
+  .logi_gamming #logi_categories_fixed .logi_categories_menu li {
+    height: 33px !important;
+  }
+
+  .logi_jaybird #logi_categories {
+    height: auto !important;
+  }
+  .logi_jaybird .logi_categories_menu {
+    width: 80%;
+  }
+  .logi_jaybird .logi_categories_menu li a img.logi_j_prod {
+    height: 130px !important;
+    width: auto !important;
+  }
+  .logi_jaybird .logi_categories_menu li {
+    height: 110px !important;
+  }
+}
