@@ -1,0 +1,36 @@
+- Mouses
+  - G604 LIGHTSPEED Wireless
+  - G703 LIGHTSPEED Wireless
+  - G403
+  - G903 LIGHTSPEED Wireless
+  - G502 HERO
+  - G502 LIGHTSPEED Wireless
+  - PRO GAMING
+  - G305 LIGHTSPEED
+- Keyboards
+  - G915 TKL LIGHTSPEED Wireless
+  - PRO X
+  - PRO
+  - G915 LIGHTSPEED Wireless
+  - G513 RGB LIGHTSYNC
+  - G213 PRODIGY
+  - G413 CARBON
+- Headsets
+  - G733
+  - PRO X
+  - PRO X Wireless
+  - PRO
+  - G935 Wireless
+  - G433
+- Joystick & "Volantes"
+  - G923 TRUEFORCE
+  - G29 DRIVING FORCE
+- Camaras
+  - C922
+  - StreamCam
+- Mousepad's
+  - POWERPLAY
+  - G440
+  - G240
+- Speakers
+  - G560 LIGHTSYNC
