@@ -229,19 +229,19 @@
   });
 })(jQuery);
 /*
-     _ _      _       _
- ___| (_) ___| | __  (_)___
-/ __| | |/ __| |/ /  | / __|
-\__ \ | | (__|   < _ | \__ \
-|___/_|_|\___|_|\_(_)/ |___/
-                   |__/
- Version: 1.5.0
-  Author: Ken Wheeler
- Website: http://kenwheeler.github.io
-    Docs: http://kenwheeler.github.io/slick
-    Repo: http://github.com/kenwheeler/slick
-  Issues: http://github.com/kenwheeler/slick/issues
- */
+       _ _      _       _
+   ___| (_) ___| | __  (_)___
+  / __| | |/ __| |/ /  | / __|
+  \__ \ | | (__|   < _ | \__ \
+  |___/_|_|\___|_|\_(_)/ |___/
+                     |__/
+   Version: 1.5.0
+    Author: Ken Wheeler
+   Website: http://kenwheeler.github.io
+      Docs: http://kenwheeler.github.io/slick
+      Repo: http://github.com/kenwheeler/slick
+    Issues: http://github.com/kenwheeler/slick/issues
+   */
 /* global window, document, define, jQuery, setInterval, clearInterval */
 !(function (a) {
   "use strict";
@@ -2045,10 +2045,59 @@ jQuery(document).ready(function ($) {
       $("#logi_slider .slick-slide").css({ height: slidervideoH + "px" });
     }
   }
+  //open pop video ***************************************
+  $(document).on(
+    "click",
+    ".logi_button_video, .logi_video_btn",
+    function (event) {
+      event.preventDefault();
+      var videoID = $(this).attr("href");
+      if ($(this).hasClass("youtube")) {
+        var url =
+          "https://www.youtube.com/embed/" +
+          videoID +
+          "?rel=0&hd=1&autoplay=0&showinfo=0&controls=0";
+        $("#logi_video").hide();
+        $("#logi_pop iframe").attr("src", url).show();
+      } else {
+        $("#logi_pop iframe").hide();
+        $("#logi_video source").attr("src", videoID);
+        $("#logi_video")[0].load();
+      }
+
+      if ($("#logi_max_container").hasClass("logi_vc")) {
+        if ($(window).width() < 700) {
+          $("#logi_max_container").animate(
+            { scrollTop: 0 },
+            800,
+            "easeOutExpo"
+          );
+        } else {
+          if ($("#logi_max_container").hasClass("logi_fixedheight")) {
+            var posCategory = $(this).parents(".logi_section").position().top;
+            var posItem = $(this).parents(".item_loop").position().top;
+            var posButton = $(this).position().top;
+            var positionForm = posCategory + posItem + posButton - 150;
+            $("#logi_pop .logi_pop_container").css("top", positionForm + "px");
+          }
+        }
+      }
+      $("#logi_pop").fadeIn();
+      $("#logi_video").get(0).play();
+    }
+  );
+
+  //close pop video ***************************************
+  $(document).on("click", ".logi_close_pop", function (event) {
+    event.preventDefault();
+    $("#logi_video").get(0).pause();
+    $("#logi_pop, #logi_pop_contact, .contpops").fadeOut();
+    $("#logi_pop iframe").attr("src", "").show();
+  });
 
   /*********************************************************************************
-				CENTRAR CONTENIDO VERTICALMENTE
-				*********************************************************************************/
+          CENTRAR CONTENIDO VERTICALMENTE
+          *********************************************************************************/
   function centered() {
     //if(  $(window).width() > 400  ){
     $(".centered").each(function (index) {
@@ -2060,8 +2109,8 @@ jQuery(document).ready(function ($) {
   }
 
   /*********************************************************************************
-				GET CURRENT CLIENT
-				*********************************************************************************/
+          GET CURRENT CLIENT
+          *********************************************************************************/
   $(window).bind("load", function () {
     var clientfull = window.location.href;
     //via iframe
